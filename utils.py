@@ -16,7 +16,7 @@ def filter_date():
         'Selecione a data:',        
         min_value=datetime(2022,2,12),
         max_value=datetime(2022,4,6),
-        value= datetime(2022,4,6),
+        value= datetime(2022,4,5),
         format = 'DD-MM-YYYY')
     
     st.markdown(slider_date)
