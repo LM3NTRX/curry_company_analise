@@ -14,7 +14,7 @@ with st.sidebar:
 st.markdown('# Growth')
 st.markdown(
     """
-    Growth Dashboard foi construido para acompanhar as métricas de crescimento dos entregadores e restaurantes.
+    Growth Dashboard foi construido para acompanhar as métricas de crescimento dos entregadores e restaurantes localizados na India.
     ### Como utilizar esse DashBorad?
         - Visão Empresa:
             - Visão gerencial: Métricas  gerais de comportamento.

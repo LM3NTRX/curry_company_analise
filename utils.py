@@ -35,7 +35,8 @@ def filter_traffic():
     return slider_traffic
 
 def clean_df(df1: pd.DataFrame):
-    df1.replace('NaN ', np.nan, inplace= True)
+    df1.loc[:,'Weatherconditions'] = df1.loc[:,'Weatherconditions'].replace('conditions NaN', 'NaN ')
+    df1.replace('NaN ', np.nan, inplace= True)    
     df1.loc[:, 'ID'] = df1.loc[:, 'ID'].str.strip()
     df1.loc[:, 'Delivery_person_ID'] = df1.loc[:, 'Delivery_person_ID'].str.strip()
     df1.loc[:, 'Delivery_person_Age'] = df1.loc[:, 'Delivery_person_Age'].astype(float)
@@ -119,3 +120,4 @@ def draw_chart_location(df1):
         #Percorrendo cada linha das colunas de longitude / latitude e adicionando um marcador no mapa utilizando a função lambda       
         mapa.apply( lambda marker: folium.Marker(location= [marker['Delivery_location_latitude'], marker['Delivery_location_longitude']]).add_to(mapa1), axis =1)
         return mapa1
+
